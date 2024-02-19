@@ -1541,7 +1541,7 @@ ReflectionProbe:
   m_Resolution: 512
   m_UpdateFrequency: 0
   m_BoxSize: {x: 128.83008, y: 128.33076, z: 448.8943}
-  m_BoxOffset: {x: -0.7380905, y: 35.003605, z: 22.12857}
+  m_BoxOffset: {x: -0.7380905, y: 29.744614, z: 22.12857}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -1566,7 +1566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186271857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.450404, y: 35.135426, z: 15.489673}
+  m_LocalPosition: {x: -4.450404, y: 40.394417, z: 15.489673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
