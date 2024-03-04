@@ -27,7 +27,7 @@ public class GrabConstraint : MonoBehaviour
     void LateUpdate()
     {
         // Check if the object is grabbed
-        if (grabInteractable.isSelected)
+        if (grabInteractable.isSelected || true)
         {
             // Get the current local position of the object
             Vector3 localPosition = transform.localPosition;
@@ -49,18 +49,4 @@ public class GrabConstraint : MonoBehaviour
             }
         }
     }
-
-    // Called when the object is grabbed
-/*    private void OnGrabbed(XRBaseInteractor interactor)
-    {
-        // Enable the constraint when the object is grabbed
-        enabled = true;
-    }
-
-    // Called when the object is released
-    private void OnReleased(XRBaseInteractor interactor)
-    {
-        // Disable the constraint when the object is released
-        enabled = false;
-    }*/
 }
