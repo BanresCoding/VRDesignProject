@@ -23,6 +23,12 @@ public class SlidingDoorManager : MonoBehaviour
 
     }
 
+    private void LateUpdate()
+    {
+        
+    }
+
+
     public void moveDoor(float percentage) 
     {
         SlidingDoor.SetBlendShapeWeight(0, percentage * 100f);

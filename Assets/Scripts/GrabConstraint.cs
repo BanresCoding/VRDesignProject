@@ -9,8 +9,10 @@ public class GrabConstraint : MonoBehaviour
     private Rigidbody rb;
     private XRGrabInteractable grabInteractable;
     private Vector3 startPos;
-
+    [Header("Sliding Door Parts")]
+    [SerializeField] SlidingDoorManager doorManager; //Use only with SlidingDoors
     public bool setDoor = false;
+    public Transform positionRef;
 
     void Start()
     {
@@ -24,13 +26,19 @@ public class GrabConstraint : MonoBehaviour
         enabled = true;
     }
 
+    private void Update()
+    {
+        positionRef.position = transform.position;
+    }
+
+
     void LateUpdate()
     {
         // Check if the object is grabbed
-        if (grabInteractable.isSelected || true)
+        if (true)
         {
             // Get the current local position of the object
-            Vector3 localPosition = transform.localPosition;
+            Vector3 localPosition = positionRef.localPosition;
 
             // Constrain movement along the Z-axis in local space
             localPosition.z = Mathf.Clamp(localPosition.z, minZ, maxZ);
@@ -39,13 +47,14 @@ public class GrabConstraint : MonoBehaviour
 
             // Update the local position of the object
             transform.localPosition = localPosition;
+            positionRef.localPosition = localPosition;
 
             if (setDoor)
             {
-                float progress = transform.localPosition.z - minZ;
+                float progress = positionRef.localPosition.z - minZ;
                 float percentage = progress / (maxZ - minZ);
                 // Debug.Log(percentage);
-                transform.GetComponentInParent<SlidingDoorManager>().moveDoor(percentage);
+                doorManager.moveDoor(percentage);
             }
         }
     }
