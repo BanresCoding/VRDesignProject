@@ -901,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZ: -1.09
   maxZ: -0.2727
+  setDoor: 1
 --- !u!1 &627065240
 GameObject:
   m_ObjectHideFlags: 0

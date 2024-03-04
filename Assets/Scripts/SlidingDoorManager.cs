@@ -26,16 +26,13 @@ public class SlidingDoorManager : MonoBehaviour
 
 
 
-    public IEnumerator movedoor()
+    public void moveDoor(float percentage) 
     {
-        SlidingDoor.SetBlendShapeWeight(0, SlidingDoor.GetBlendShapeWeight(0) + 2.5f);
-        if (SlidingDoor.GetBlendShapeWeight(0) >= 100)
-        {
-            SlidingDoor.SetBlendShapeWeight(0, 0);
-        }
-        yield return new WaitForSeconds(0.05f);
-        StartCoroutine(movedoor());
+        SlidingDoor.SetBlendShapeWeight(0, percentage * 100f);
     }
+
+
+
 
     // Update is called once per frame
     void Update()
