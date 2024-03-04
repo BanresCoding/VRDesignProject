@@ -55,13 +55,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3170807789207759955}
-  - component: {fileID: 3732411056699858058}
-  - component: {fileID: 2141995207040820506}
   - component: {fileID: 1179698832698904283}
   - component: {fileID: 6500727508799028819}
   - component: {fileID: 9127596767000651070}
   - component: {fileID: 2706375508708522283}
   - component: {fileID: 5918375608116282381}
+  - component: {fileID: 6747441932152248248}
   m_Layer: 0
   m_Name: DoorInteractObj
   m_TagString: Untagged
@@ -77,63 +76,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727788797852941841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.99999994, z: -0.737}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -0.058, y: 0.9999999, z: -0.2727}
+  m_LocalScale: {x: 0.1, y: 0.35083002, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3718349147083040101}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3732411056699858058
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727788797852941841}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2141995207040820506
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727788797852941841}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -2505642851634945670, guid: 0eff2b76793715340a55c0e1e7783754, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1179698832698904283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,8 +102,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8583767, y: 0.8918224, z: 0.24107595}
+  m_Center: {x: 0.07081176, y: -0.0994581, z: -0.018308572}
 --- !u!54 &6500727508799028819
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -178,9 +127,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
-  m_Constraints: 6
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &9127596767000651070
 MonoBehaviour:
@@ -202,7 +151,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
-  m_SelectMode: 0
+  m_SelectMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
   m_AllowGazeSelect: 0
@@ -345,7 +294,7 @@ PositionConstraint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727788797852941841}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: 0.99999994, z: -0.737}
@@ -354,12 +303,23 @@ PositionConstraint:
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
   m_Active: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 2681698667957867669}
-    weight: 1
-  - sourceTransform: {fileID: 7484893975960603090}
-    weight: 1
+  m_IsLocked: 1
+  m_Sources: []
+--- !u!114 &6747441932152248248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727788797852941841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcea2d991f1dc0647868533b8d63d30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZ: -1.09
+  maxZ: -0.2727
+  setDoor: 1
 --- !u!1 &4021736884618382895
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491303013432395317}
   - component: {fileID: 8155622775248450578}
+  - component: {fileID: 6953810625511543252}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -448,6 +409,27 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.0054351385, z: 0.0000000013969839}
     m_Extent: {x: 0.00010683647, y: 0.0056116036, z: 0.010294396}
   m_DirtyAABB: 0
+--- !u!65 &6953810625511543252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021736884618382895}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.000213673, y: 0.011223213, z: 0.020588798}
+  m_Center: {x: -0.000000007450581, y: 0.0054351413, z: 0.0000000013969843}
 --- !u!1 &4318798909700442476
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +463,7 @@ Transform:
   - {fileID: 3184196403254316402}
   - {fileID: 3170807789207759955}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1220964204838755548
 MonoBehaviour:
@@ -498,6 +480,11 @@ MonoBehaviour:
   SlidingDoor: {fileID: 8155622775248450578}
   openPos: {fileID: 2681698667957867669}
   closePos: {fileID: 7484893975960603090}
+  col: {fileID: 6953810625511543252}
+  colliderSizeMax: {x: 0.000213673, y: 0.011223213, z: 0.020588798}
+  colliderSizeMin: {x: 0.00021367299, y: 0.0030795769, z: 0.020588798}
+  colliderCenterMax: {x: -0.000000007450581, y: 0.0054351413, z: 0.0000000013969843}
+  colliderCenterMin: {x: -0.000000006961175, y: 0.001363306, z: 0.0000000022216673}
 --- !u!1 &4895998985684829794
 GameObject:
   m_ObjectHideFlags: 0
