@@ -27,30 +27,27 @@ public class GrabConstraint : MonoBehaviour
     void LateUpdate()
     {
         // Check if the object is grabbed
-        
+        if (grabInteractable.isSelected)
+        {
             // Get the current local position of the object
-        Vector3 localPosition = transform.localPosition;
+            Vector3 localPosition = transform.localPosition;
 
             // Constrain movement along the Z-axis in local space
-        localPosition.z = Mathf.Clamp(localPosition.z, minZ, maxZ);
+            localPosition.z = Mathf.Clamp(localPosition.z, minZ, maxZ);
 
-        localPosition = new Vector3(startPos.x, startPos.y, localPosition.z);
-
-            // Freeze movement along other axes
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+            localPosition = new Vector3(startPos.x, startPos.y, localPosition.z);
 
             // Update the local position of the object
-        transform.localPosition = localPosition;
+            transform.localPosition = localPosition;
 
-        if (setDoor)
-        {
-            float progress = transform.localPosition.z - minZ;
-            float percentage = progress / (maxZ - minZ);
-            Debug.Log(percentage);
-            transform.GetComponentInParent<SlidingDoorManager>().moveDoor(percentage);
+            if (setDoor)
+            {
+                float progress = transform.localPosition.z - minZ;
+                float percentage = progress / (maxZ - minZ);
+                // Debug.Log(percentage);
+                transform.GetComponentInParent<SlidingDoorManager>().moveDoor(percentage);
+            }
         }
-        
     }
 
     // Called when the object is grabbed
