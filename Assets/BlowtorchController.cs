@@ -3,20 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ControllerManager : MonoBehaviour
+public class BlowtorchController : MonoBehaviour
 {
-    public XRController rightHand;
-    public InputHelpers.Button button;
+    public bool held = false;
+    public bool firing = false;
+
+    [SerializeField]
+    GameObject NormalFiringParticle;
+    public Transform ParticleAnchor;
+    GameObject currentFiredParticle;
+
 
     void Update()
     {
 
-        bool pressed;
-        rightHand.inputDevice.IsPressed(button, out pressed);
+    }
 
-        if (pressed)
+    public void setHeld(bool state)
+    {
+        held = state;
+        if (!held)
         {
-            Debug.Log("Hello - " + button);
+            firing = false;
+            
         }
+    }
+
+    public void setFiring(bool state)
+    {
+        if (held)
+        {
+            firing = state;
+            if (firing)
+            {
+                currentFiredParticle = Instantiate(NormalFiringParticle, ParticleAnchor);
+            }
+            else
+            {
+                ParticleSystem particle = currentFiredParticle.GetComponent<ParticleSystem>();
+                var main = particle.main;
+                var emission = particle.emission;
+
+                main.loop = false;
+                emission.rateOverTime = 0;
+            }
+        }
+        
     }
 }
