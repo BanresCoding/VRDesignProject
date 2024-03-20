@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PrisonRoom.unity
+    guid: fc5f9c162cde92a41ba7c66098cc1a88
+  - enabled: 1
+    path: Assets/Scenes/BoilerRoom.unity
+    guid: 25aaba5c504932a49b321551ce453a61
+  - enabled: 1
+    path: Assets/Scenes/EscapeCorridor.unity
+    guid: 4de6e12e3a92acb49bf7621d79c73cbd
+  - enabled: 1
+    path: Assets/Scenes/OperationsRoom.unity
+    guid: fd46eddefd909ae4fabcf5c0e990c7b0
+  - enabled: 1
+    path: Assets/Scenes/Helm.unity
+    guid: 219ce212f123ff041816e647ab5b7f82
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 46192d96a6692814fa4634ef23bfe3c7, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 3e5976b8aaf124c40814e720ccbcaf20, type: 2}
